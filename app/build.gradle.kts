@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.dagger.hilt.android")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -66,4 +68,18 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    // retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.10.0")
+    // retrofit convertor factory
+    implementation("com.squareup.retrofit2:converter-gson:2.10.0")
+
+    //Dagger - Hilt
+    implementation("com.google.dagger:hilt-android:2.49")
+    ksp("com.google.dagger:dagger-compiler:2.48.1")
+    ksp("com.google.dagger:hilt-android-compiler:2.48.1")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+
+    // navigation
+    implementation("androidx.navigation:navigation-compose:2.7.7")
 }
