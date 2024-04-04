@@ -5,7 +5,7 @@ import apps.sumit.rollthedice.data.remote.dto.DiceDTO
 import retrofit2.http.GET
 
 interface DiceAPI {
-    @GET()
+    @GET("/")
     suspend fun getDetails(): DetailsDTO
 
     @GET("/random")
